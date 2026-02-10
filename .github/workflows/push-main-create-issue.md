@@ -6,10 +6,14 @@ on:
   push:
     branches:
       - main
+network:
+  allowed:
+    - defaults
+    - telemetry.individual.githubcopilot.com
 permissions:
-  contents: read       
-  issues: read         
-  pull-requests: read  
+  contents: read
+  issues: read
+  pull-requests: read
   checks: read         
   statuses: read       
 tools:
