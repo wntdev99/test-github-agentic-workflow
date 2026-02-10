@@ -133,6 +133,8 @@ jobs:
         env:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
       - name: Install GitHub Copilot CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: /opt/gh-aw/actions/install_copilot_cli.sh 0.0.405
       - name: Install awf binary
         run: bash /opt/gh-aw/actions/install_awf_binary.sh v0.13.12
