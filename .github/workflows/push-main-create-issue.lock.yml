@@ -356,7 +356,8 @@ jobs:
           } >> "$GITHUB_OUTPUT"
           
           echo "Safe Outputs MCP server will run on port ${PORT}"
-          
+      - name: Install GitHub Copilot CLI
+        run: gh extension install github/gh-copilot          
       - name: Start Safe Outputs MCP HTTP Server
         id: safe-outputs-start
         env:
