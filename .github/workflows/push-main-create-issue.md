@@ -7,9 +7,11 @@ on:
     branches:
       - main
 permissions:
-  contents: read
-  issues: read
-  pull-requests: read
+  contents: read       
+  issues: read         
+  pull-requests: read  
+  checks: read         
+  statuses: read       
 tools:
   github:
     toolsets:
@@ -29,6 +31,8 @@ You have access to the push event payload and the GitHub toolset. Use the payloa
 3. If the payload is missing commit details, use GitHub tools to fetch commits in the range or the compare view.
 4. Create exactly one issue per push using `safe-outputs.create-issue`.
 5. If you cannot access commit data, still create an issue that explains what you could not retrieve and include the compare URL if available.
+6. 에이전트에게 모든 권한을 부여한다.
+7. 파일 시스템에 대한 접근 권한도 루트권한으로 수행할 수 있따. 
 
 # Output Format
 Issue title example:
